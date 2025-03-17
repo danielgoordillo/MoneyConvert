@@ -80,7 +80,7 @@ Requisitos del código:
 Crear un método addMoney(Money m1, Money m2) que devuelva la suma de dos cantidades en la misma moneda.
 Crear un método subtractMoney(Money m1, Money m2) que reste dos cantidades en la misma moneda.
 Crear un método compareAmounts(Money m1, Money m2) que indique cuál cantidad es mayor o si son iguales.
-Crea una clase dentro del paqute principal PruebaA, con una función main (para probar el código), definiendo lo siguiente:
+Crea una clase dentro del paqute principal com.softmar.MoneyConvert.PruebaA, con una función main (para probar el código), definiendo lo siguiente:
 
 Definir 2 variblaes usd1 de moneda USD de valor 100 y otra, usd2 de valor 50.
 Definir un variable tipo CurrencyUnit, nombre eur y valor CurrencyUnit.EUR.
@@ -113,9 +113,9 @@ Accede a la documentación de Joda Money en Joda Money Docs.
 Busca información sobre la clase Money y otras clases relacionadas.
 Implementar la funcionalidad
 
-Crea una clase Product con los atributos, String name y Money price
+Crea una clase com.softmar.MoneyConvert.Product con los atributos, String name y Money price
 Implementa un método applyDiscount(Money price, double percentage) que devuelva un nuevo precio con el descuento aplicado.
-Crea una clase ShoppingCart que permita agregar productos y calcular el total antes y después del descuento.
+Crea una clase com.softmar.MoneyConvert.ShoppingCart que permita agregar productos y calcular el total antes y después del descuento.
 Requisitos del código:
 
 Crea una clase PruebaShoppingCard, con una función main (para probar el código), definiendo lo siguiente:
@@ -133,4 +133,4 @@ Total con descuentos aplicados: USD 1870.00
 🔍 Pistas:
 
 Métodos útiles: multipliedBy(), minus(), plus().
-Pueden almacenar los productos en una List<Product> dentro de ShoppingCart.
+Pueden almacenar los productos en una List<com.softmar.MoneyConvert.Product> dentro de com.softmar.MoneyConvert.ShoppingCart.

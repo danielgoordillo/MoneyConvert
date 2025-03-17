@@ -1,3 +1,5 @@
+package com.softmar.MoneyConvert;
+
 import org.joda.money.Money;
 import org.joda.money.CurrencyUnit;
 

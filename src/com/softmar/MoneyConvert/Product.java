@@ -1,4 +1,8 @@
+package com.softmar.MoneyConvert;
+
 import org.joda.money.Money;
+
+
 
 public class Product {
     private String name;
