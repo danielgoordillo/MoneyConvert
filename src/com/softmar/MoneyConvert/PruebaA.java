@@ -1,32 +1,46 @@
 package com.softmar.MoneyConvert;
 
-import org.joda.money.CurrencyUnit;
 import org.joda.money.Money;
+import org.joda.money.CurrencyUnit;
 
 public class PruebaA {
     public static void main(String[] args) {
-        // Definir cantidades de dinero en USD
-        Money usd1 = Money.of(CurrencyUnit.USD, 100.00);
-        Money usd2 = Money.of(CurrencyUnit.USD, 50.00);
+        System.out.println(" PRUEBA DE CONVERSIONES Y OPERACIONES ");
 
-        // Tipo de cambio ficticio (1 USD = 0.85 EUR)
-        long exchangeRate = (long) 0.85;
+        // Defino variables de prueba
+        Money usd1 = Money.of(CurrencyUnit.USD, 100);
+        Money usd2 = Money.of(CurrencyUnit.USD, 50);
 
-        // Conversión de USD a EUR usando CurrencyConverter
-        Money eurAmount = CurrencyConverter.convert(usd1, exchangeRate);
-        System.out.println("Conversión: USD 100 equivale a EUR " + eurAmount.getAmount());
 
-        // Suma de usd1 y usd2
-        Money sum = CurrencyConverter.addMoney(usd1, usd2);
-        System.out.println("Suma: " + sum.getAmount() + " USD");
+        CurrencyUnit eur = CurrencyUnit.EUR;
 
-        // Resta de usd1 y usd2
-        Money difference = CurrencyConverter.subtractMoney(usd1, usd2);
-        System.out.println("Resta: " + difference.getAmount() + " USD");
+        // Tipo de cambio USD a EUR (ficticio)
+        double exchangeRate = 0.85;
 
-        // Comparación de usd1 y usd2
-        String comparison = CurrencyConverter.compareAmounts(usd1, usd2);
-        System.out.println("Comparación: " + comparison);
+        // Hago la conversión
+        Money eurAmount = CurrencyConverter.convert(usd1, eur, exchangeRate);
+
+        // Muestro los resultados
+        System.out.println("Conversión: " + usd1 + " equivale a " + eurAmount);
+
+
+        System.out.println("\nOperaciones con cantidades:");
+
+        // Suma
+        Money resultadoSuma = CurrencyConverter.addMoney(usd1, usd2);
+        System.out.println("Suma: " + resultadoSuma);
+
+        // Resta
+        Money resultadoResta = CurrencyConverter.subtractMoney(usd1, usd2);
+        System.out.println("Resta: " + resultadoResta);
+
+        // Comparacion
+        String comparacion = CurrencyConverter.compareAmounts(usd1, usd2);
+        System.out.println("Comparación: " + comparacion);
+
+        // Otra comparacion
+        String otraComparacion = CurrencyConverter.compareAmounts(usd2, usd1);
+        System.out.println("Otra comparación: " + otraComparacion);
     }
 }
 
